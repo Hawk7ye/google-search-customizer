@@ -1,0 +1,8 @@
+{
+  "enabled": {
+    "message": "Google Search Customizer is now enabled."
+  },
+  "disabled": {
+    "message": "Google Search Customizer is now disabled."
+  }
+}

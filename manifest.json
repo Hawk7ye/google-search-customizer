@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Google Search Customizer",
+  "version": "1.0",
+
+  "action": {
+    "default_title": "Google Search Customizer",
+    "default_popup": "public/views/popup.html"
+  },
+  "default_locale": "de",
+  "description": "Customizes google search results",
+  "icons": {
+    "16": "public/images/favicon-16x16.png",
+    "32": "public/images/favicon-32x32.png",
+    "48": "public/images/android-chrome-192x192.png",
+    "128": "public/images/android-chrome-512x512.png"
+  },
+
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "js": ["src/scripts/content.js"],
+      "matches": ["https://www.google.com/search*"]
+    }
+  ],
+  "options_page": "public/views/options.html",
+  "permissions": ["notifications", "storage"]
+}
